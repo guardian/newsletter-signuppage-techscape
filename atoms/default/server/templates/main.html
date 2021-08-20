@@ -1,1 +1,38 @@
-<div class="interactive-wrapper">HTML</div>
+<div class="interactive-wrapper">
+    <div class="gs-container saturday-newsletter">
+        <div class="header">
+            <!-- <img src="https://media.guim.co.uk/ce07ca3797b830b82df27861a254bc74f885d022/522_0_2111_1267/2000.jpg" alt=""> -->
+        </div>
+        <div class="body content__main-column">
+            {{#Header}}
+            <h1>{{headline}}</h1>
+            <p class="body__subheading">{{standfirst}}</p>
+            <p class="body__paragraph">{{description}}</p>
+            {{/Header}}
+            <div class="body__form"></div>
+            <div class="body__onwards">
+                <h2>You might also like...</h2>
+                
+                <div class="body__onwards--inner">
+                    {{#Onward}}
+                    <div class="card card--1">
+                        <img src="" alt="">
+                        <div class="card__content">
+                            <h3 class="card__content--title">{{newsletterName}}</h3>
+                            <p>{{bodyText}}</p>
+                            <p class="card__content--date">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M20 10C20 15.5227 15.5227 20 10 20C4.47727 20 0 15.5227 0 10C0 4.47727 4.47727 0 10 0C15.5227 0 20 4.47727 20 10ZM11.0909 9.68182L10.4318 1.81819H9.54548L8.86367 10.3409L10.0228 11.5L16.3637 10.9091V10L11.0909 9.68182Z" fill="#052962"/>
+                                    </svg>{{publicationDate}}</p>
+                        </div>
+                    </div>
+                   
+                   
+                    {{/Onward}}   
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</div>

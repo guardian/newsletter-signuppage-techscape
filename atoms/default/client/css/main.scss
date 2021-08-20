@@ -3,8 +3,125 @@
 @import "mq";
 @import "palette";
 // @import "enhancer";
+@import "gu_grid";
+@import "palette";
+@import "space";
 
 .interactive-atom {
     margin: 0;
     padding: 0;
 }
+
+$backgroundColor: $culture-800;
+$primaryColor: #121212;
+$secondaryColor: $culture-300;
+
+.interactive-wrapper {
+    background-color: $culture-500;
+}
+
+.saturday-newsletter {
+    background-color: $backgroundColor;
+    .header {
+        border-bottom: 1px solid black;
+        height: 450px;
+        img {
+            width: 100%;
+        }
+    }
+    .body{
+        padding-top: $space-1;
+
+        h1{
+            font-family: $f-headline-full;
+            color: $primaryColor;
+            font-size: 34px;
+            line-height: 115%;
+            font-weight: 700;
+            padding-bottom: $space-12;
+        }
+        p {
+            font-family: $f-serif-text;
+            font-size: 17px;
+            line-height: 150%;
+            color: $primaryColor;
+            padding-bottom: $space-1;
+        }
+       
+        &__subheading {
+            font-weight: 700;
+        }
+        &__paragraph {
+
+        }
+        &__form {
+            padding-bottom: $space-9;
+        }
+        &__onwards {
+            border-top: 1px solid black;
+            padding-bottom: $space-5;
+
+            h2 {
+            font-family: $f-headline-full;
+            color: $primaryColor;
+            font-size: 24px;
+            line-height: 115%;
+            font-weight: 700;
+            padding-bottom: $space-2;
+            
+            }
+            &--inner {
+                display: flex;
+                flex-direction: row;
+                background-color: green;
+                justify-content: space-between;
+            }
+
+            .card {
+                width: calc(25% - 10px);
+                background-color: salmon;
+                &__image {
+                    min-width: 140px;
+                    min-height: 90px;
+                    background-color: $neutral-7;
+                    img{
+
+                    }
+
+                }
+                &__content {
+                    padding-bottom: $space-1;
+                    h3 {
+                        font-family: $f-headline-full;
+                        font-weight: 700;
+                        font-size: 17px;
+                        line-height: 115%;
+                        color: $secondaryColor;
+                    }
+                    &--title {
+                        padding-bottom: $space-3;
+                    }
+                    p {
+                        font-family: $f-sans-serif-text;
+                        font-size: 15px;
+                        line-height: 135%;
+                    }
+                    &--date {
+                        display: flex;
+                        align-items: center;
+                        svg {
+                            width: 14px;
+                            height: 14px;
+                            margin-right: 4px;
+                            margin-top: 1px;
+                            path {
+                                fill: $primaryColor;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

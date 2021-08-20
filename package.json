@@ -59,8 +59,12 @@
     "babel-loader": "^8.0.6",
     "babel-plugin-module-resolver": "^4.0.0",
     "babel-plugin-transform-import-bangtext-node": "^0.1.4",
+    "fixed": "^0.3.1",
     "gulp-replace": "^1.0.0",
     "mkdirp": "^0.5.1",
+    "mustache": "^4.2.0",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.6",
     "terser-webpack-plugin": "^4.2.2",
     "uglifyjs-webpack-plugin": "^2.2.0",
     "unfetch": "^4.2.0"

@@ -1,7 +1,8 @@
 <div class="interactive-wrapper">
     <div class="gs-container saturday-newsletter">
         <div class="header">
-            <!-- <img src="https://media.guim.co.uk/ce07ca3797b830b82df27861a254bc74f885d022/522_0_2111_1267/2000.jpg" alt=""> -->
+            <!-- <img src="{{imageUrl}}" alt="{{imageAltText}}"> -->
+            <img src="https://media.guim.co.uk/ce07ca3797b830b82df27861a254bc74f885d022/522_0_2111_1267/1000.jpg" alt="">
         </div>
         <div class="body content__main-column">
             {{#Header}}
@@ -9,16 +10,45 @@
             <p class="body__subheading">{{standfirst}}</p>
             <p class="body__paragraph">{{description}}</p>
             {{/Header}}
-            <div class="body__form"></div>
+            <!-- <div class="body__form">
+                <form action="https://www.theguardian.com/email" method="post" id="plaintone-email-sub-form" class="email-sub__form email-sub__form--plaintone" data-email-form-type="plaintone" data-email-list-name="inside-saturday">
+                    <input type="hidden" name="csrfToken" value="d9b8c01d19922cbbe81411f753a15c2da1e1b92d-1629820603316-b5241addd319643837983989">
+                    <div class="email-sub__form-wrapper">
+                       <div class="email-sub__inline-label">
+                          <input class="email-sub__text-input" type="email" name="email" id="plaintone-email-sub-input">
+                          <label class="email-sub__label" for="plaintone-email-sub-input">
+                             <span class="inline-envelope inline-icon label__icon">
+                                <svg width="44" height="32" viewBox="0 0 44 32" class="label__icon__svg inline-envelope__svg inline-icon__svg">
+                                   <path d="M40 28H4V6l16 14h4L40 6v22zM36 4 22 16 8 4h28zm4-4H4L0 4v24l4 4h36l4-4V4l-4-4z"></path>
+                                </svg>
+                             </span>
+                             Enter your email address
+                          </label>
+                          <input class="email-sub__text-input u-h" autocomplete="off" type="text" name="name" id="plaintone-email-sub-input-name" placeholder="Name">
+                          <input class="email-sub__listname-input" type="hidden" name="listName" value="inside-saturday">
+                       </div>
+                       <button type="submit" class="email-sub__submit-button button button--tertiary button--large" id="email-embed-signup-button--old" data-component="email-signup-button plaintone-inside-saturday" data-link-name="plaintone | inside-saturday">
+                          <span class="inline-envelope inline-icon submit-input__icon">
+                             <svg width="44" height="32" viewBox="0 0 44 32" class="submit-input__icon__svg inline-envelope__svg inline-icon__svg">
+                                <path d="M40 28H4V6l16 14h4L40 6v22zM36 4 22 16 8 4h28zm4-4H4L0 4v24l4 4h36l4-4V4l-4-4z"></path>
+                             </svg>
+                          </span>
+                          Sign up
+                       </button>
+                    </div>
+                 </form>        
+                <p class="body__disclaimer">No spam ever. Unsubscribe in one click.</p>
+            </div> -->
+
             <div class="body__onwards">
                 <h2>You might also like...</h2>
                 
                 <div class="body__onwards--inner">
                     {{#Onward}}
                     <div class="card">
-                        <div class="card__image">
+                        <!-- <div class="card__image">
                             <img src="{{imageUrl}}" alt="">
-                        </div>
+                        </div> -->
                         
                         <div class="card__content">
                             <h3 class="card__content--title">{{newsletterName}}</h3>
@@ -36,6 +66,5 @@
                 
             </div>
         </div>
-        
     </div>
 </div>

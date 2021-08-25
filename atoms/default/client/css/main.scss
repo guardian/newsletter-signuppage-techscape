@@ -13,7 +13,7 @@
 }
 
 $backgroundColor: $culture-800;
-$primaryColor: #121212;
+$primaryColor: $neutral-7;
 $secondaryColor: $culture-300;
 
 .interactive-wrapper {
@@ -22,22 +22,33 @@ $secondaryColor: $culture-300;
 
 .saturday-newsletter {
     background-color: $backgroundColor;
+
+
     .header {
-        border-bottom: 1px solid black;
-        height: 450px;
+        border-bottom: 1px solid $primaryColor;
+        overflow: hidden;
+        height: 200px;
+
+        @include mq(desktop) {
+            height: 450px;
+            width: 100%;
+        }
+        
         img {
+            margin: 0 auto;
             width: 100%;
         }
     }
     .body{
         padding-top: $space-1;
+        margin: 0 12px;
 
         h1{
             font-family: $f-headline-full;
             color: $primaryColor;
             font-size: 34px;
             line-height: 115%;
-            font-weight: 700;
+            font-weight: 500;
             padding-bottom: $space-12;
         }
         p {
@@ -50,6 +61,7 @@ $secondaryColor: $culture-300;
        
         &__subheading {
             font-weight: 700;
+            font-family: $f-headline-full;
         }
         &__paragraph {
 
@@ -58,8 +70,9 @@ $secondaryColor: $culture-300;
             padding-bottom: $space-9;
         }
         &__onwards {
-            border-top: 1px solid black;
+            border-top: 1px solid $primaryColor;
             padding-bottom: $space-5;
+            margin-top: $space-6;
 
             h2 {
             font-family: $f-headline-full;
@@ -67,20 +80,30 @@ $secondaryColor: $culture-300;
             font-size: 24px;
             line-height: 115%;
             font-weight: 700;
-            padding-bottom: $space-2;
+            padding-bottom: $space-4;
             
             }
             &--inner {
                 display: flex;
                 flex-direction: row;
-                background-color: green;
-                justify-content: space-between;
+                flex-wrap: wrap;
+                gap: $space-2;
+                justify-content: space-between; 
+                
+                @include mq(tablet) {
+
+                }
+                
             }
 
             .card {
+                border-top: 1px solid $culture-600;
+                width: calc(50% - 12px);
+                @include mq(tablet){
                 width: calc(25% - 10px);
-                background-color: salmon;
+                }
                 
+
                 &__image {
                     min-width: 140px;
                     min-height: 90px;

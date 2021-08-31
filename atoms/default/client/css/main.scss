@@ -15,17 +15,23 @@
 $backgroundColor: $culture-800;
 $primaryColor: $neutral-7;
 $secondaryColor: $culture-300;
+$borderColor: $culture-600;
+
+
 
 .interactive-wrapper {
-    background-color: $culture-500;
+    background-color: $backgroundColor;
 }
 
 .saturday-newsletter {
     background-color: $backgroundColor;
-
-
+    @include mq(tablet) {
+        border-left: 1px solid $borderColor;
+        border-right: 1px solid $borderColor;
+    }
+    
     .header {
-        border-bottom: 1px solid $primaryColor;
+        border-bottom: 1px solid $borderColor;
         overflow: hidden;
         height: 200px;
 
@@ -70,7 +76,7 @@ $secondaryColor: $culture-300;
             padding-bottom: $space-9;
         }
         &__onwards {
-            border-top: 1px solid $primaryColor;
+            border-top: 1px solid $borderColor;
             padding-bottom: $space-5;
             margin-top: $space-6;
 
@@ -97,7 +103,7 @@ $secondaryColor: $culture-300;
             }
 
             .card {
-                border-top: 1px solid $culture-600;
+                border-top: 1px solid $borderColor;
                 width: calc(50% - 12px);
                 @include mq(tablet){
                 width: calc(25% - 10px);
@@ -106,8 +112,9 @@ $secondaryColor: $culture-300;
 
                 &__image {
                     min-width: 140px;
-                    min-height: 90px;
-                    background-color: $neutral-7;
+                    height: 110px;
+                    background-color: $borderColor;
+                    overflow: hidden;
                     img {
                         object-fit: contain;
                         width: 100%;
@@ -115,39 +122,66 @@ $secondaryColor: $culture-300;
                     }
 
                 }
-                &__content {
-                    padding-bottom: $space-1;
-                    h3 {
-                        font-family: $f-headline-full;
-                        font-weight: 700;
-                        font-size: 17px;
-                        line-height: 115%;
-                        color: $secondaryColor;
-                    }
-                    &--title {
-                        padding-bottom: $space-3;
-                    }
-                    p {
-                        font-family: $f-sans-serif-text;
-                        font-size: 15px;
-                        line-height: 135%;
-                    }
-                    &--date {
-                        display: flex;
-                        align-items: center;
-                        svg {
-                            width: 14px;
-                            height: 14px;
-                            margin-right: 4px;
-                            margin-top: 1px;
-                            path {
-                                fill: $primaryColor;
-                            }
+                &__content-title {
+                    padding-bottom: $space-3;
+                    font-family: $f-headline-full;
+                    font-weight: 700;
+                    font-size: 17px;
+                    line-height: 115%;
+                    color: $secondaryColor;
+                }
+                &__content-body {
+                    font-family: $f-sans-serif-text;
+                    font-size: 15px;
+                    line-height: 135%;
+                }
+                &__content-date {
+                    display: flex;
+                    align-items: center;
+                    font-weight: 700;
+                    font-family: $f-sans-serif-text;
+                    font-size: 12px;
+                    color: $secondaryColor;
+                    svg{
+                        width: 14px;
+                        margin: 1px 4px 0 0;
+                        path {
+                            fill: $secondaryColor;
                         }
                     }
                 }
             }
         }
     }
+}
+
+// This is where Doms sign up form styling starts
+
+// This is the whole sign up block
+.sleeve-notes-email {
+    padding-top: $space-2;
+}
+
+// This is also the whole block
+.email-signup__lozenge {
+}
+
+// This is the actual form
+
+
+.email-sub__submit-button {
+    // background-color: cadetblue;
+}
+
+.email-signup__aside-text {
+    font-family: $f-sans-serif-text;
+}
+
+.email-sub__submit-button button .button--tertiary .button--large {
+    background-color: orange;
+}
+
+#email-embed-signup-button--old {
+    background-color: pink;
 }
 

@@ -10,35 +10,24 @@
             <p class="body__subheading">{{standfirst}}</p>
             <p class="body__paragraph">{{description}}</p>
             {{/Header}}
-            <!-- <div class="body__form">
-                <form action="https://www.theguardian.com/email" method="post" id="plaintone-email-sub-form" class="email-sub__form email-sub__form--plaintone" data-email-form-type="plaintone" data-email-list-name="inside-saturday">
-                    <input type="hidden" name="csrfToken" value="d9b8c01d19922cbbe81411f753a15c2da1e1b92d-1629820603316-b5241addd319643837983989">
-                    <div class="email-sub__form-wrapper">
-                       <div class="email-sub__inline-label">
-                          <input class="email-sub__text-input" type="email" name="email" id="plaintone-email-sub-input">
-                          <label class="email-sub__label" for="plaintone-email-sub-input">
-                             <span class="inline-envelope inline-icon label__icon">
-                                <svg width="44" height="32" viewBox="0 0 44 32" class="label__icon__svg inline-envelope__svg inline-icon__svg">
-                                   <path d="M40 28H4V6l16 14h4L40 6v22zM36 4 22 16 8 4h28zm4-4H4L0 4v24l4 4h36l4-4V4l-4-4z"></path>
-                                </svg>
-                             </span>
-                             Enter your email address
-                          </label>
-                          <input class="email-sub__text-input u-h" autocomplete="off" type="text" name="name" id="plaintone-email-sub-input-name" placeholder="Name">
-                          <input class="email-sub__listname-input" type="hidden" name="listName" value="inside-saturday">
-                       </div>
-                       <button type="submit" class="email-sub__submit-button button button--tertiary button--large" id="email-embed-signup-button--old" data-component="email-signup-button plaintone-inside-saturday" data-link-name="plaintone | inside-saturday">
-                          <span class="inline-envelope inline-icon submit-input__icon">
-                             <svg width="44" height="32" viewBox="0 0 44 32" class="submit-input__icon__svg inline-envelope__svg inline-icon__svg">
-                                <path d="M40 28H4V6l16 14h4L40 6v22zM36 4 22 16 8 4h28zm4-4H4L0 4v24l4 4h36l4-4V4l-4-4z"></path>
-                             </svg>
+        <!-- The sign up form is added via an iframe -->
+            <div class="sleeve-notes-email">
+                <div class="email-signup email-signup__lozenge" data-component="sleeve-notes-email-interactive">
+                  <iframe id="tech-scape" name="tech-scape" src="https://www.theguardian.com/email/form/plaintone/tech-scape" scrolling="no" seamless="" class="iframed--overflow-hidden email-sub__iframe" height="52px" frameborder="0" data-component="email-embed--tech-scape"></iframe>
+
+                    <div class="email-signup__aside-text">
+                        <span>No spam ever. Unsubscribe in one click.</span>
+                        <span class="email-signup__aside-text__frequency">
+                          <span class="inline-clock inline-icon">
+                            <svg width="11" height="11" viewBox="0 0 11 11"><path d="M5.4 0c-3 0-5.4 2.4-5.4 5.4s2.4 5.4 5.4 5.4 5.4-2.4 5.4-5.4-2.4-5.4-5.4-5.4zm3 6.8h-3.7v-5.1h.7l.6 3.7 2.4.6v.8z"/></svg>
                           </span>
-                          Sign up
-                       </button>
+                            weekly
+                        </span>
                     </div>
-                 </form>        
-                <p class="body__disclaimer">No spam ever. Unsubscribe in one click.</p>
-            </div> -->
+                </div>
+
+            </div>
+            <!-- This is the end of the form from Dom's newsletter sign up page -->
 
             <div class="body__onwards">
                 <h2>You might also like...</h2>
@@ -46,21 +35,25 @@
                 <div class="body__onwards--inner">
                     {{#Onward}}
                     <div class="card">
-                        <!-- <div class="card__image">
+                        <div class="card__image">
                             <img src="{{imageUrl}}" alt="">
-                        </div> -->
+                        </div>
                         
                         <div class="card__content">
-                            <h3 class="card__content--title">{{newsletterName}}</h3>
-                            <p>{{bodyText}}</p>
-                            <p class="card__content--date">
+                            <h3 class="card__content-title">{{newsletterName}}</h3>
+                            <p class="card__content-body">{{bodyText}}</p>
+                            <!-- <p class="card__content--date">
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M20 10C20 15.5227 15.5227 20 10 20C4.47727 20 0 15.5227 0 10C0 4.47727 4.47727 0 10 0C15.5227 0 20 4.47727 20 10ZM11.0909 9.68182L10.4318 1.81819H9.54548L8.86367 10.3409L10.0228 11.5L16.3637 10.9091V10L11.0909 9.68182Z" fill="#052962"/>
-                                    </svg>{{publicationDate}}</p>
+                                    </svg>{{publicationDate}}
+                            </p> -->
+                            <p class="card__content-date"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M20 10C20 15.5227 15.5227 20 10 20C4.47727 20 0 15.5227 0 10C0 4.47727 4.47727 0 10 0C15.5227 0 20 4.47727 20 10ZM11.0909 9.68182L10.4318 1.81819H9.54548L8.86367 10.3409L10.0228 11.5L16.3637 10.9091V10L11.0909 9.68182Z" fill="#052962"/>
+                                </svg>{{publicationDate}}
+                            </p>
+                            
                         </div>
-                    </div>
-                   
-                   
+                    </div>              
                     {{/Onward}}   
                 </div>
                 

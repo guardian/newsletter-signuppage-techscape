@@ -49,7 +49,10 @@ $borderColor: $culture-600;
     }
     .body{
         padding-top: $space-1;
-        margin: 0 12px;
+
+        @include mq(leftCol) {
+
+        }
 
         h1{
             font-family: $f-headline-full;
@@ -157,35 +160,75 @@ $borderColor: $culture-600;
     }
 }
 
-// This is where Doms sign up form styling starts
-
 // This is the whole sign up block
 .sleeve-notes-email {
     padding-top: $space-2;
 }
 
-// This is also the whole block
-.email-signup__lozenge {
-}
-
-// This is the actual form
-
-
-.email-sub__submit-button {
-    // background-color: cadetblue;
-}
 
 .email-signup__aside-text {
     font-family: $f-sans-serif-text;
     font-size: 12px;
 }
 
-.email-sub__submit-button button .button--tertiary .button--large {
-    background-color: orange;
-}
 
-#email-embed-signup-button--old {
-    background-color: pink;
+.ios, .android {
+    .pb-wrapper {
+        .pb-header__wrapper {
+            margin-bottom:16px;
+            .pb-header__text {
+                h1 {
+                    margin: 0;
+                    span {
+                        margin-top: 2px;
+                    }
+                }
+
+                h2 {
+                    margin: 0;
+                }
+            }
+
+            .pb-header__images__inner {
+                img {
+                    height: 100%;
+                }
+            }
+        }
+        .pb-content {
+            .pb-mobile__text {
+                h2,
+                .pb-right__block__standfirst {
+                    margin-top: 0;
+                    margin-bottom:16px;
+                }
+                h3 {
+                    margin-top: 0;
+                    margin-bottom: 4px;
+                }
+            }
+            .mobile-drawer {
+                .pb-right__block__paragraph {
+                    font-size:17px;
+                    padding-top: 4px;
+                    line-height:150%;
+                }
+                .pb-right__block__byline {
+                    margin-top:0;
+                }
+            }
+        }
+        .pb-meta {
+            display:none;
+        }
+        .open-me {
+            margin-top: -2px;
+        }
+
+        .close-me {
+            margin-top: -2px;
+        }
+    }
 }
 
 

@@ -12,6 +12,7 @@ figure.element, .element-atom, .interactive-atom {
     padding: 0;
 }
 
+// These colour variables are pulled from _palette and use the source naming convention
 $backgroundColor: $culture-800;
 $primaryColor: $neutral-7;
 $secondaryColor: $culture-300;
@@ -169,6 +170,7 @@ $borderColor: $culture-600;
 .email-signup__aside-text {
     font-family: $f-sans-serif-text;
     font-size: 12px;
+    font-weight: bold;
 }
 
 

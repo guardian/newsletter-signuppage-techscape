@@ -4,7 +4,7 @@ import rp from 'request-promise'
 
 export function render() {
     return rp({
-        uri: 'https://interactive.guim.co.uk/docsdata-test/1Ou7iiqispIBnZWNrT1WyhYxirUbeyrqV_sykX4QG7X0.json',
+        uri: 'https://interactive.guim.co.uk/docsdata-test/1wPfnUxgfsDQWFOAJntRn768w6-vjmUvmQ2uyVGT4ZYY.json',
         json: true
     }).then((data) => {
         var sheets = data.sheets;

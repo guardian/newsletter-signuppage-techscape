@@ -1,8 +1,11 @@
 <div class="interactive-wrapper">
     <div class="gs-container saturday-newsletter">
         <div class="header">
-            <!-- <img src="{{imageUrl}}" alt="{{imageAltText}}"> -->
-            <img src="https://media.guim.co.uk/87a3ddee8fa3421cd096487924a347dfc0d8bbdb/0_0_6600_2336/6600.jpg" alt="">
+            {{#Header}}
+            <img src="{{imageUrl}}" alt="{{imageAltText}}">
+            {{/Header}}
+            <!-- <img src="https://media.guim.co.uk/87a3ddee8fa3421cd096487924a347dfc0d8bbdb/0_0_6600_2336/6600.jpg" alt=""> -->
+            
         </div>
         <div class="body content__main-column">
             {{#Header}}
@@ -27,7 +30,7 @@
                 </div>
 
             </div>
-            <!-- This is the end of the form from Dom's newsletter sign up page -->
+        <!-- This is the end of the form -->
 
             <div class="body__onwards">
                 <h2>You might also like...</h2>
@@ -42,11 +45,6 @@
                         <div class="card__content">
                             <h3 class="card__content-title">{{newsletterName}}</h3>
                             <p class="card__content-body">{{bodyText}}</p>
-                            <!-- <p class="card__content--date">
-                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M20 10C20 15.5227 15.5227 20 10 20C4.47727 20 0 15.5227 0 10C0 4.47727 4.47727 0 10 0C15.5227 0 20 4.47727 20 10ZM11.0909 9.68182L10.4318 1.81819H9.54548L8.86367 10.3409L10.0228 11.5L16.3637 10.9091V10L11.0909 9.68182Z" fill="#052962"/>
-                                    </svg>{{publicationDate}}
-                            </p> -->
                             <p class="card__content-date"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M20 10C20 15.5227 15.5227 20 10 20C4.47727 20 0 15.5227 0 10C0 4.47727 4.47727 0 10 0C15.5227 0 20 4.47727 20 10ZM11.0909 9.68182L10.4318 1.81819H9.54548L8.86367 10.3409L10.0228 11.5L16.3637 10.9091V10L11.0909 9.68182Z" fill="#052962"/>
                                 </svg>{{publicationDate}}

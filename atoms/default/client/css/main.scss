@@ -156,6 +156,13 @@ $borderColor: $culture-600;
                         }
                     }
                 }
+                
+            }
+            a {
+                text-decoration: none;
+            }
+            a:hover .card__content-title {
+                text-decoration: underline;
             }
         }
     }

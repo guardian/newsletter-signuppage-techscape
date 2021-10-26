@@ -12,11 +12,14 @@ figure.element, .element-atom, .interactive-atom {
     padding: 0;
 }
 
+// This is the ad-hoc colour for techscape
+$techscape: #529eaf;
+
 // These colour variables are pulled from _palette and use the source naming convention
-$backgroundColor: $culture-800;
+$backgroundColor: $techscape;
 $primaryColor: $neutral-7;
-$secondaryColor: $culture-300;
-$borderColor: $culture-600;
+$secondaryColor: $neutral-100;
+$borderColor: $neutral-100;
 
 
 
@@ -50,6 +53,7 @@ $borderColor: $culture-600;
     }
     .body{
         padding-top: $space-1;
+        padding-bottom: $space-4;
 
         @include mq(leftCol) {
 
@@ -57,23 +61,24 @@ $borderColor: $culture-600;
 
         h1{
             font-family: $f-headline-full;
-            color: $primaryColor;
+            color: $secondaryColor;
             font-size: 34px;
             line-height: 115%;
-            font-weight: 500;
+            font-weight: 700;
             padding-bottom: $space-12;
         }
         p {
             font-family: $f-serif-text;
             font-size: 17px;
             line-height: 150%;
-            color: $primaryColor;
+            color: $secondaryColor;
             padding-bottom: $space-1;
         }
        
         &__subheading {
             font-weight: 700;
             font-family: $f-headline-full;
+            
         }
         &__paragraph {
 
@@ -178,6 +183,7 @@ $borderColor: $culture-600;
     font-family: $f-sans-serif-text;
     font-size: 12px;
     font-weight: bold;
+    color: $neutral-100;
 }
 
 
